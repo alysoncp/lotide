@@ -21,9 +21,24 @@ const assertArraysEqual = function(actual, expected) {
   }
 };
 
-// TEST CODE
-assertArraysEqual([1, 2, 3], [1, 2, 3, 4]); // => true
-assertArraysEqual([1, 2, 3], [3, 2, 1]); // => false
 
-assertArraysEqual(["1", "2", "3"], ["1", "2", "3"]); // => true
-assertArraysEqual(["1", "2", "3"], ["1", "2", 3]); // => false
+//NEW CODE FOR LETTER IDEXES
+const letterPositions = function(string) {
+  let letterPosn = {};
+  for (let x = 0; x < string.length; x++) {
+    if (string[x] !== ' ') {
+      if (letterPosn[string[x]]) {
+        letterPosn[string[x]].push(x);
+      } else {
+        letterPosn[string[x]] = [x]
+      }
+    }
+  }
+  return letterPosn;
+};
+
+console.log(letterPositions("hello"));
+
+const helloResult = { h: [ 0 ], e: [ 1 ], l: [ 2, 3 ], o: [ 4 ] };
+
+assertArraysEqual(letterPositions("hello"), helloResult);

@@ -1,3 +1,4 @@
+//Can be used to check if you know the letter count of a test input
 const assertEqual = function(actual, expected) {
   if (actual === expected) {
     console.log(`✅ Assertion Passed: ${actual} === ${expected}`);
