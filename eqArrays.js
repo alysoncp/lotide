@@ -14,7 +14,7 @@ const eqArrays = function(actual, expected) {
       console.log('true');
     } else {
       console.log('false');
-    } 
+    }
     
   } else {
     console.log('false');

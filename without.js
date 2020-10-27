@@ -14,7 +14,7 @@ const assertArraysEqual = function(actual, expected) {
       console.log(`✅ Assertion Passed: ${actual} === ${expected}`);
     } else {
       console.log(`❌ Assertion Failed: ${actual} !== ${expected}`);
-    } 
+    }
     
   } else {
     console.log(`❌ Assertion Failed: ${actual} !== ${expected}`);
@@ -23,30 +23,30 @@ const assertArraysEqual = function(actual, expected) {
 
 
 const without = function(array, remove) {
-let baseArray = array;
-let stepArray = [];
-  for(let item of remove){
+  let baseArray = array;
+  let stepArray = [];
+  for (let item of remove) {
     stepArray = [];
-    for(let elm of baseArray){
-      if (elm !== item){
+    for (let elm of baseArray) {
+      if (elm !== item) {
         stepArray.push(elm);
       }
     }
     /* DEBUG STATEMENTS
     console.log(`baseArray: ${baseArray} with length: ${baseArray.length}`)
     console.log(`stepArray: ${stepArray} with length: ${stepArray.length}`)*/
-    if (stepArray.length < baseArray.length){
+    if (stepArray.length < baseArray.length) {
       baseArray = stepArray;
-    }  
+    }
   }
 
   return baseArray;
 
-}
+};
 
-console.log(without([1, 2, 3], [1]) )// => [2, 3]
-console.log(without(["1", "2", "3"], [1, 2, "3", "2"])) // => ["1", "2"]
-console.log(without(["hello", "world", "lighthouse"], ["lighthouse"]))
+console.log(without([1, 2, 3], [1]));// => [2, 3]
+console.log(without(["1", "2", "3"], [1, 2, "3", "2"])); // => ["1", "2"]
+console.log(without(["hello", "world", "lighthouse"], ["lighthouse"]));
 
 
 const words = ["hello", "world", "lighthouse"];
