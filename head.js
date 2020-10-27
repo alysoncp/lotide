@@ -8,10 +8,10 @@ const assertEqual = function(actual, expected) {
 };
 
 //Head Function
-const head = function (array) {
+const head = function(array) {
   const output = array[0];
   return output;
-}
+};
 
 //Test code to call function
 assertEqual(head([5,6,7]), 5);
