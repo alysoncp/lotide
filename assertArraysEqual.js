@@ -11,13 +11,13 @@ const eqArrays = function(actual, expected) {
     }
 
     if (match) {
-      console.log('true');
+      console.log(`✅ Assertion Passed: ${actual} === ${expected}`);
     } else {
-      console.log('false');
+      console.log(`❌ Assertion Failed: ${actual} !== ${expected}`);
     } 
     
   } else {
-    console.log('false');
+    console.log(`❌ Assertion Failed: ${actual} !== ${expected}`);
   }
 };
 
