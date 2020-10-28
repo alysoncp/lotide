@@ -21,24 +21,21 @@ const assertArraysEqual = function(actual, expected) {
   }
 };
 
+//-------------------------
 
-//NEW CODE FOR LETTER IDEXES
-const letterPositions = function(string) {
-  let letterPosn = {};
-  for (let x = 0; x < string.length; x++) {
-    if (string[x] !== ' ') {
-      if (letterPosn[string[x]]) {
-        letterPosn[string[x]].push(x);
-      } else {
-        letterPosn[string[x]] = [x];
-      }
-    }
+
+const words = ["ground", "control", "to", "major", "tom"];
+
+const map = function(array, callback) {
+  const results = [];
+  for (let item of array) {
+    results.push(callback(item));
   }
-  return letterPosn;
+  return results;
 };
 
-console.log(letterPositions("hello"));
 
-const helloResult = { h: [ 0 ], e: [ 1 ], l: [ 2, 3 ], o: [ 4 ] };
+const results1 = map(words, word => word[0]);
+console.log(results1);
 
-assertArraysEqual(letterPositions("hello"), helloResult);
+assertArraysEqual(results1, [ 'g', 'c', 't', 'm', 't' ]);

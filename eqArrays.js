@@ -4,7 +4,7 @@ const eqArrays = function(actual, expected) {
     let x = 0;
     while (x < actual.length) {
       if (actual[x] !== expected[x]) {
-       return false
+        return false;
       }
       x++;
     }

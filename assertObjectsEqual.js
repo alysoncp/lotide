@@ -12,7 +12,7 @@ const eqArrays = function(actual, expected) {
     let x = 0;
     while (x < actual.length) {
       if (actual[x] !== expected[x]) {
-       return false
+        return false;
       }
       x++;
     }
@@ -31,13 +31,13 @@ const assertObjectsEqual = function(object1, object2) {
   const inspect = require('util').inspect;
   const object1Keys = Object.keys(object1);
   const object2Keys = Object.keys(object2);
-  if(object1Keys.length === object2Keys.length){
-    for (key of object1Keys){
-      if (!object2[key]){
+  if (object1Keys.length === object2Keys.length) {
+    for (const key of object1Keys) {
+      if (!object2[key]) {
         console.log(`❌ Assertion Failed: ${inspect(object1)} !== ${inspect(object2)}`);
         return false;
       } else {
-        if(!eqArrays(object1[key], object2[key])){
+        if (!eqArrays(object1[key], object2[key])) {
           console.log(`❌ Assertion Failed: ${inspect(object1)} !== ${inspect(object2)}`);
           return false;
         }
