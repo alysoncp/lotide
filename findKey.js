@@ -41,3 +41,6 @@ assertEqual(results2, undefined);
 
 results3 = findKey(galaxy, x => x.stars === 3)
 assertEqual(results3, "Akaleri");
+
+
+module.exports = findKey;

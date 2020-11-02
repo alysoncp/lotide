@@ -22,4 +22,4 @@ const countOnly =  function(string) {
   return letterCount;
 };
 
-console.log(countOnly("Lighthouse Labs"));
+module.exports = countOnly;
