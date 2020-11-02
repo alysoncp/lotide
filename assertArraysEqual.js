@@ -21,9 +21,4 @@ const assertArraysEqual = function(actual, expected) {
   }
 };
 
-// TEST CODE
-assertArraysEqual([1, 2, 3], [1, 2, 3, 4]); // => true
-assertArraysEqual([1, 2, 3], [3, 2, 1]); // => false
-
-assertArraysEqual(["1", "2", "3"], ["1", "2", "3"]); // => true
-assertArraysEqual(["1", "2", "3"], ["1", "2", 3]); // => false
+module.exports = assertArraysEqual;
